@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'//butterknife插件：生成R2这样一个类，这个类用来生成视图绑定所需要的viewId
 
 android {
     compileSdkVersion 27
@@ -28,6 +29,15 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:27.+'
     testCompile 'junit:junit:4.12'
-    compile 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
+
     compile project(':latte-annotations')
+    //字体图标
+    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
+    compile 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
+    //Fragment依赖
+    compile 'me.yokeyword:fragmentation:0.10.1'
+    compile 'me.yokeyword:fragmentation-swipeback:0.7.9'//边缘滑动可以回到上一个fragment的库
+    //BufferKnife依赖
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 }
