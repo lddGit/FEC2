@@ -1,14 +1,14 @@
 package com.ldd.fec;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import com.ldd.latte.activities.ProxyActivity;
 
-public class MainActivity extends AppCompatActivity {
+import com.ldd.latte.delegates.LatteDelegate;
+
+public class MainActivity extends ProxyActivity {
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+    public LatteDelegate setRootDelegate() {
+        return new ExampleDelegate();
     }
 }
